@@ -251,6 +251,8 @@ export default class Office365CalendarService implements Calendar {
         },
         type: "required",
       })),
+			isOnlineMeeting: true,
+      onlineMeetingProvider: "teamsForBusiness",
       location: event.location ? { displayName: getLocation(event) } : undefined,
     };
   };
