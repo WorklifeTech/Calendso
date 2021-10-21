@@ -11,6 +11,7 @@ export type BookingCreateBody = {
   name: string;
   notes: string;
   rescheduleUid?: string;
+  uid?: string;
   start: string;
   timeZone: string;
   users?: string[];

@@ -39,6 +39,7 @@ const BookingPage = (props: BookingPageProps) => {
   const { t } = useLocale();
   const router = useRouter();
   const { rescheduleUid } = router.query;
+  const { uid } = router.query;
   const { isReady } = useTheme(props.profile.theme);
 
   const date = asStringOrNull(router.query.date);
@@ -110,6 +111,7 @@ const BookingPage = (props: BookingPageProps) => {
         eventTypeId: props.eventType.id,
         timeZone: timeZone(),
       };
+      if (typeof uid === "string") payload.uid = uid;
       if (typeof rescheduleUid === "string") payload.rescheduleUid = rescheduleUid;
       if (typeof router.query.user === "string") payload.user = router.query.user;
 

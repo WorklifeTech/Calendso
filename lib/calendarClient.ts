@@ -117,6 +117,7 @@ export interface CalendarEvent {
   title: string;
   startTime: string;
   endTime: string;
+  uid?: string;
   description?: string;
   team?: {
     name: string;
