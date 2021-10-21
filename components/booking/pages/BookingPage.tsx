@@ -262,6 +262,7 @@ const BookingPage = (props: BookingPageProps) => {
                         type="text"
                         name="name"
                         id="name"
+                        value={router.query["name"]}
                         required
                         className="block w-full border-gray-300 rounded-sm shadow-sm dark:bg-black dark:text-white dark:border-gray-900 focus:ring-black focus:border-brand sm:text-sm"
                         placeholder="John Doe"
@@ -281,6 +282,7 @@ const BookingPage = (props: BookingPageProps) => {
                         name="email"
                         id="email"
                         inputMode="email"
+                        value={router.query["email"]}
                         required
                         className="block w-full border-gray-300 rounded-sm shadow-sm dark:bg-black dark:text-white dark:border-gray-900 focus:ring-black focus:border-brand sm:text-sm"
                         placeholder="you@example.com"
@@ -339,6 +341,7 @@ const BookingPage = (props: BookingPageProps) => {
                             <textarea
                               name={"custom_" + input.id}
                               id={"custom_" + input.id}
+                              value={router.query[input.label]}
                               required={input.required}
                               rows={3}
                               className="block w-full border-gray-300 rounded-sm shadow-sm dark:bg-black dark:text-white dark:border-gray-900 focus:ring-black focus:border-brand sm:text-sm"
@@ -350,6 +353,7 @@ const BookingPage = (props: BookingPageProps) => {
                               type="text"
                               name={"custom_" + input.id}
                               id={"custom_" + input.id}
+                              value={router.query[input.label]}
                               required={input.required}
                               className="block w-full border-gray-300 rounded-sm shadow-sm dark:bg-black dark:text-white dark:border-gray-900 focus:ring-black focus:border-brand sm:text-sm"
                               placeholder={input.placeholder}
@@ -360,6 +364,7 @@ const BookingPage = (props: BookingPageProps) => {
                               type="number"
                               name={"custom_" + input.id}
                               id={"custom_" + input.id}
+                              value={router.query[input.label]}
                               required={input.required}
                               className="block w-full border-gray-300 rounded-sm shadow-sm dark:bg-black dark:text-white dark:border-gray-900 focus:ring-black focus:border-brand sm:text-sm"
                               placeholder=""
@@ -371,6 +376,7 @@ const BookingPage = (props: BookingPageProps) => {
                                 type="checkbox"
                                 name={"custom_" + input.id}
                                 id={"custom_" + input.id}
+                                value={router.query[input.label]}
                                 className="w-4 h-4 mr-2 text-black border-gray-300 rounded focus:ring-black"
                                 placeholder=""
                                 required={input.required}
